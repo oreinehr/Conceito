@@ -17,7 +17,7 @@ body {
 }
 @font-face {
   font-family: 'Basic Sans';
-  src: url('../../Conceito--main/public/BASIC-SANS.OTF') format('OTF');
+  src: url('../public/Basic-Sans.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
