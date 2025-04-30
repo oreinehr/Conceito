@@ -34,7 +34,7 @@ export default function Header() {
           <Link href="/portfolio" className="text-sm hover:text-gray-300 transition-colors">
             Portfolio
           </Link>
-          <Link href="/o-que-fazemos" className="text-sm hover:text-gray-300 transition-colors">
+          <Link href="/quem-somos" className="text-sm hover:text-gray-300 transition-colors">
             Quem Somos?
           </Link>
           <Link
