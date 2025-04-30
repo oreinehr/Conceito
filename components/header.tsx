@@ -35,7 +35,7 @@ export default function Header() {
             Portfolio
           </Link>
           <Link href="/o-que-fazemos" className="text-sm hover:text-gray-300 transition-colors">
-            O que fazemos?
+            Quem Somos?
           </Link>
           <Link
             href="/contato"

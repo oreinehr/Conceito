@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
 
       <main className="container mx-auto mt-4 px-6 py-12">
-        <h1 className="text-5xl font-light mb-12">Portfolio</h1>
+        <h1 className="text-4xl font-light mb-12">Portfolio</h1>
 
         {/* Grid de imagens */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
