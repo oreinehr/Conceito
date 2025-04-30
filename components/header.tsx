@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${show ? 'opacity-100' : 'opacity-0'} bg-black/30 backdrop-blur-md`}>
-      <div className="container mx-auto py-4 px-8 flex justify-between items-center">
+      <div className="container mx-auto py-4 px-6 flex justify-between items-center">
         <div className="text-xl font-light">conceito</div>
 
         {/* Menu para dispositivos maiores */}

@@ -9,7 +9,7 @@ export default function OQueFazemos() {
       {/* Header */}
       <Header />
 
-      <div className="container mx-auto px-4 py-10 space-y-24">
+      <div className="container mx-auto px-6 py-10 space-y-24">
         {/* Quem somos */}
         <section>
           <h1 className="text-4xl md:text-5xl font-extralight mb-6">Quem somos</h1>
@@ -23,7 +23,7 @@ export default function OQueFazemos() {
 
         {/* O que fazemos */}
         <section>
-          <h2 className="text-3xl md:text-4xl font-extralight mb-12">O que fazemos?</h2>
+          <h2 className="text-3xl md:text-5xl font-extralight mb-12">O que fazemos?</h2>
 
           <div className="mb-12">
             <h3 className="text-xl font-extralight mb-2">Mentoria de ideias 360</h3>
@@ -105,36 +105,56 @@ export default function OQueFazemos() {
 
           <div className="space-y-8">
             <div className="flex items-center gap-6">
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-full">
-                <Compass className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full">
+              <img
+        src="./icone1.svg"
+        alt="Wave Background"
+        className="w-full h-full object-fit"
+      />
               </div>
               <p className="text-xl">Expertise em comunicação 360º</p>
             </div>
 
             <div className="flex items-center gap-6">
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-full">
-                <Network className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full">
+              <img
+        src="./Vector-1.svg"
+    
+        className="w-full h-full object-fit"
+      />
               </div>
               <p className="text-xl">Abordagem integrada e estratégica</p>
             </div>
 
             <div className="flex items-center gap-6">
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-full">
-                <Users className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full">
+              <img
+        src="./Vector.svg"
+        alt="Wave Background"
+        className="w-full h-full object-fit"
+      />
               </div>
               <p className="text-xl">Equipe multidisciplinar e criativa</p>
             </div>
 
             <div className="flex items-center gap-6">
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-full">
-                <Award className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full">
+              <img
+        src="./icon-3.svg"
+        alt="Wave Background"
+        className="w-full h-full object-fit"
+      />
               </div>
               <p className="text-xl">Compromisso com a excelência e inovação</p>
             </div>
 
             <div className="flex items-center gap-6">
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-full">
-                <BarChart3 className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full">
+              <img
+        src="./Vector-2.svg"
+        alt="Wave Background"
+        className="w-full h-full object-fit"
+      />
               </div>
               <p className="text-xl">Resultados comprovados</p>
             </div>
