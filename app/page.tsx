@@ -52,38 +52,38 @@
         </section>
 
         {/* Wave Section */}
-        <section className="flex bg-black py-12 relative overflow-hidden w-full px-8 md:px-20">
-    <div className="flex  px-8 flex-row justify-between items-center w-full" style={{ aspectRatio: '16/9' }}>
-      
-      {/* Texto principal */}
-      <div className="flex flex-col z-10 px-8">
-        <h2 className="text-3xl md:text-7xl font-extralight leading-tight px-8">
-          A água é <br />
-          essencial, vital, <br />
-          primordial
-        </h2>
-      </div>
-
-      {/* Texto secundário */}
-      <div className="flex flex-col text-left ml-6 md:ml-0 z-10 px-8">
-        <p className="text-md md:text-4xl font-extralight leading-snug px-8">
-          Para uma empresa, <br />
-          comunicação também
-        </p>
-      </div>
+        <section className="flex bg-black py-12 relative overflow-hidden w-full px-20 px-[22px] md:px-8">
+  <div className="flex flex-col md:flex-row justify-between items-center w-full relative z-10" style={{ aspectRatio: '16/9' }}>
     
-
-
-      {/* Fundo SVG */}
-      <div className="absolute inset-0 opacity-60 -z-0 justify-left">
-        <img
-          src="./Group.svg"
-          alt="Wave Background"
-          className="w-full h-full object-fit"
-        />
-      </div>
+    {/* Texto principal */}
+    <div className="flex flex-col z-10 px-8 py-4">
+      <h2 className="text-3xl md:text-7xl font-extralight leading-tight">
+        A água é <br />
+        essencial, vital, <br />
+        primordial
+      </h2>
     </div>
-  </section>
+
+    {/* Texto secundário */}
+    <div className="flex flex-col z-10 px-8">
+      <p className="text-md md:text-3xl font-extralight leading-snug">
+        Para uma empresa, <br />
+        comunicação também
+      </p>
+    </div>
+
+    {/* Fundo SVG */}
+    <div className="absolute inset-0 opacity-60 -z-0">
+      <img
+        src="./Group.svg"
+        alt="Wave Background"
+        className="w-full h-full object-fit"
+      />
+    </div>
+  </div>
+</section>
+
+
 
 
 

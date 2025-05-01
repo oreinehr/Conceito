@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { Menu } from "lucide-react" // Ícone de menu branco (usa lucide)
 
 export default function Header() {
   const [show, setShow] = useState(true)
@@ -11,32 +12,34 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        setShow(false) // Scroll para baixo, esconde
+        setShow(false)
       } else {
-        setShow(true) // Scroll para cima, mostra
+        setShow(true)
       }
       setLastScrollY(window.scrollY)
     }
 
     window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [lastScrollY])
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${show ? 'opacity-100' : 'opacity-0'} bg-black/30 backdrop-blur-md`}>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        show ? "opacity-100" : "opacity-0"
+      } ${isMenuOpen ? "bg-black" : "bg-black/30"} backdrop-blur-md`}
+    >
       <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-        <Link href="/" className="text-xl font-light">
+        <Link href="/" className="text-xl font-light text-white">
           conceito
         </Link>
 
-        {/* Menu para dispositivos maiores */}
+        {/* Menu desktop */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/portfolio" className="text-sm hover:text-gray-300 transition-colors">
+          <Link href="/portfolio" className="text-sm hover:text-gray-300 transition-colors text-white">
             Portfolio
           </Link>
-          <Link href="/quem-somos" className="text-sm hover:text-gray-300 transition-colors">
+          <Link href="/quem-somos" className="text-sm hover:text-gray-300 transition-colors text-white">
             Quem Somos?
           </Link>
           <Link
@@ -47,39 +50,43 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Botão do menu hambúrguer (visível em telas pequenas) */}
+        {/* Ícone de menu para mobile */}
         <button
-          className="md:hidden flex flex-col items-center justify-center space-y-1"
+          className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Abrir menu"
         >
-          <span className={`block w-6 h-0.5 bg-white transition-all transform ${isMenuOpen ? "rotate-45 translate-y-1.5" : ""}`}></span>
-          <span className={`block w-6 h-0.5 bg-white transition-all ${isMenuOpen ? "opacity-0" : ""}`}></span>
-          <span className={`block w-6 h-0.5 bg-white transition-all transform ${isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
+          <Menu size={28} />
         </button>
+      </div>
 
-        {/* Menu mobile */}
-        <div
-          className={`md:hidden absolute top-16 left-0 w-full bg-black/60 backdrop-blur-md flex flex-col items-center ${isMenuOpen ? "block" : "hidden"}`}
+      {/* Menu mobile */}
+      <div
+        className={`md:hidden absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center transition-all duration-300 ease-in-out ${
+          isMenuOpen ? "py-4" : "hidden"
+        }`}
+      >
+        <Link
+          href="/portfolio"
+          className="text-sm py-2 hover:text-gray-300 transition-colors"
+          onClick={() => setIsMenuOpen(false)}
         >
-          <Link
-            href="/portfolio"
-            className="text-sm text-white py-2 hover:text-gray-300 transition-colors"
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/o-que-fazemos"
-            className="text-sm text-white py-2 hover:text-gray-300 transition-colors"
-          >
-            O que fazemos?
-          </Link>
-          <Link
-            href="/contato"
-            className="text-sm text-white py-2 bg-white text-black px-4 py-1 rounded-full hover:bg-gray-200 transition-colors"
-          >
-            Contato
-          </Link>
-        </div>
+          Portfolio
+        </Link>
+        <Link
+          href="/quem-somos"
+          className="text-sm py-2 hover:text-gray-300 transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Quem Somos?
+        </Link>
+        <Link
+          href="/contato"
+          className="text-sm bg-white text-black px-4 py-1 rounded-full hover:bg-gray-200 transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Contato
+        </Link>
       </div>
     </header>
   )

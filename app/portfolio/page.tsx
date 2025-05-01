@@ -13,33 +13,36 @@ export default function Home() {
 
         {/* Grid de imagens */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {[
-            { src: "/img1.jpg", title: "Press Garden" },
-            { src: "/img2.jpg", title: "Humaniza" },
-            { src: "/img3.jpg", title: "Winkelhaus" },
-            { src: "/img4.jpg", title: "Carpid" },
-            { src: "/img5.jpg", title: "Blend Magazine" },
-            { src: "/img6.jpg", title: "Tulipez" },
-          ].map((item, idx) => (
-            <div key={idx} className="relative overflow-hidden group">
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={800}
-                height={600}
-                className="w-full h-auto object-cover"
-              />
+  {[
+    { src: "/img1.jpg", title: "Press Garden" },
+    { src: "/img2.jpg", title: "Humaniza" },
+    { src: "/img3.jpg", title: "Winkelhaus" },
+    { src: "/img4.jpg", title: "Scarpia" },
+    { src: "/img5.jpg", title: "Blend" },
+    { src: "/img6.jpg", title: "Tubularte" },
+  ].map((item, idx) => (
+    <div key={idx} className="relative overflow-hidden group">
+      {/* Imagem de fundo */}
+      <Image
+        src={item.src}
+        alt={item.title}
+        width={800}
+        height={600}
+        className="w-full h-auto object-cover z-0"
+      />
 
-              {/* Overlay que aparece no hover */}
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10" />
+      {/* Overlay escurecendo no hover */}
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
-              {/* Texto que aparece no hover */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <h3 className="text-white text-3xl font-light">{item.title}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Texto sobre a imagem */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+        <h3 className="text-white text-3xl font-light">{item.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
+
 
         {/* Projeto em destaque */}
         <section className="bg-black py-12 md:py-24 relative flex items-center justify-center px-4">
